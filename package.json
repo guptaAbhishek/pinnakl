@@ -1,0 +1,28 @@
+{
+  "name": "pinnakl",
+  "version": "0.0.1",
+  "description": "Angularjs Nodejs Search Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guptaAbhishek/pinnakl.git"
+  },
+  "author": "Abhishek Kumar Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guptaAbhishek/pinnakl/issues"
+  },
+  "homepage": "https://github.com/guptaAbhishek/pinnakl#readme",
+  "dependencies": {
+    "body-parser": "~1.5.2",
+    "csv": "^0.4.6",
+    "express": "~4.7.2",
+    "method-override": "~2.1.2",
+    "mongoose": "~3.6.2",
+    "morgan": "~1.2.2"
+  }
+}
