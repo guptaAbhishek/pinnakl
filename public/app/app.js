@@ -20,22 +20,22 @@ searchApp.config(function($stateProvider,$urlRouterProvider){
 
 searchApp.factory('searchTerms',function($q,$http){
   return{
-    getSearchs:function(){
-      var deferred = $q.defer(),
-      httpPromise = $http.get('./data/data.json');
-
-      httpPromise.then(function (response) {
-          deferred.resolve(response);
-        }, function (error) {
-          console.error(error);
-        });
-
-      return deferred.promise;
-
-    }
-    // list: function(callback){
-    //   $http.get('./data/data.json').success(callback);
+    // getSearchs:function(){
+    //   var deferred = $q.defer(),
+    //   httpPromise = $http.get('./data/data.json');
+    //
+    //   httpPromise.then(function (response) {
+    //       deferred.resolve(response);
+    //     }, function (error) {
+    //       console.error(error);
+    //     });
+    //
+    //   return deferred.promise;
+    //
     // }
+    list: function(callback){
+      $http.get('./data/data.json').success(callback);
+    }
   };
 });
 
