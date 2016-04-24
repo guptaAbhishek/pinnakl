@@ -26,7 +26,9 @@
               $scope.suggestions = null;
             }
             for(var i=0;i<$scope.searches.length;i++){
-              if(($scope.searches[i].SecType.toLowerCase() == keyword.toLowerCase()) || ($scope.searches[i].Ticker.toLowerCase() == keyword.toLowerCase()) || ($scope.searches[i].Cusip.toLowerCase() == keyword.toLowerCase()) || ($scope.searches[i].Description.toLowerCase() == keyword.toLowerCase())){
+              var a = $scope.searches[i];
+              var str = a.SecType+" "+ a.Ticker+" "+ a.Cusip+" "+ a.Description+" ";
+              if(str.toLowerCase().indexOf(keyword) >= 0){
                   suggestions.push($scope.searches[i]);
                   count++;
                   if(count == 10){

@@ -13,6 +13,7 @@
 
 .typehead{
   margin-left: 35px;
+  list-style: none;
 }
 
 .secType{
@@ -28,7 +29,7 @@
 }
 
 .desc{
-  
+
 }
 
 /* Add a gray background color and some padding to the footer */

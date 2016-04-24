@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -28,6 +29,8 @@
       </div>
       <div class="suggestions">
         <ul class="typehead">
+          <li ng-repeat="searchTerm in suggestions" auto-suggest-menu-item class="" style="cursor:pointer;">
+            <h3 class="secType">{{ searchTerm.SecType }}</h3>
           <li ng-repeat="searchTerm in suggestions" class="" style="cursor:pointer;">
             <span class="secType">{{ searchTerm.SecType }}</span>
             <span class="ticker">{{ searchTerm.Ticker }}</span>
