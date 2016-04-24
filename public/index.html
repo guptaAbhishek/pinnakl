@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html ng-app="searchApp">
+<html>
   <head>
     <meta charset="utf-8">
     <title>Pinkkal</title>
     <link rel="stylesheet" href="../app/content/css/index.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
   </head>
-  <body>
-    <div class="container" ng-controller="SearchListController">
+  <body ng-app="SearchApp" ng-controller="searchController">
+    <div class="container">
       <div class="row">
         <div class="col-md-10">
           <form>
             <div class="form-group">
-              <input type="input" class="form-control searchBox" ng-model="search.$" name="name" value="">
+              <input type="input" class="form-control searchBox" ng-model="searchQuery.keywords"  ng-keyup="getSugestion($event)" name="name" value="">
             </div>
           </form>
 
@@ -26,7 +26,7 @@
             <td>Cusip</td>
             <td>Description</td>
           </tr>
-          <tr ng-repeat="searchTerm in searches | filter:search">
+          <tr class="trRow" ng-repeat="searchTerm in suggestions" style="cursor:pointer;">
               <td>{{ searchTerm.SecType }}</td>
               <td>{{ searchTerm.Ticker }}</td>
               <td>{{ searchTerm.Cusip }}</td>
@@ -38,11 +38,11 @@
 
       </div>
     </div>
-    <script type="text/javascript" src="../app/js/angular/angular.js"></script>
-    <script type="text/javascript" src="http://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <!-- <script type="text/javascript" src="http://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script> -->
     <script type="text/javascript" src="../app/app.js"></script>
-    <!-- <script type="text/javascript" src="../app/controllers/searchController.js"></script>
-    <script type="text/javascript" src="../app/controllers/searchServices.js"></script> -->
+    <script type="text/javascript" src="../app/services/searchFactory.js"></script>
+    <script type="text/javascript" src="../app/controllers/searchController.js"></script>
 
   </body>
 </html>
