@@ -14,19 +14,22 @@
         }).error(function (error) {
             // log errors
         });
+
         $scope.searchQuery = { keywords: '', filterCategory: '' };
+
         $scope.getSugestion = function(ev){
-          console.log('something is workin'+ $scope.searchQuery.keywords);
           var suggestions = [];
           var count = 0;
           var keyword =  $scope.searchQuery.keywords;
-          console.log($scope.searches.length);
           if($scope.searches.length > 0){
+            if(keyword == null){
+              $scope.suggestions = null;
+            }
             for(var i=0;i<$scope.searches.length;i++){
               if(($scope.searches[i].SecType.toLowerCase() == keyword.toLowerCase()) || ($scope.searches[i].Ticker.toLowerCase() == keyword.toLowerCase()) || ($scope.searches[i].Cusip.toLowerCase() == keyword.toLowerCase()) || ($scope.searches[i].Description.toLowerCase() == keyword.toLowerCase())){
                   suggestions.push($scope.searches[i]);
                   count++;
-                  if(count == 5){
+                  if(count == 10){
                     break;
                   }
               }
@@ -34,6 +37,5 @@
           }
           $scope.suggestions = suggestions;
         }
-
     }
 })();

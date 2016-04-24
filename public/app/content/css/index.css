@@ -2,10 +2,37 @@
   Abhishek Kumar Gupta
 */
 
-body{
-  padding: 10px;
+
+
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
 }
 
-.trRow:hover{
-  background-color: #fwefff;
+.typehead{
+  margin-left: 35px;
+}
+
+.secType{
+
+}
+
+.ticker{
+
+}
+
+.cusip{
+
+}
+
+.desc{
+  
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+background-color: #f2f2f2;
+  padding: 25px;
 }
