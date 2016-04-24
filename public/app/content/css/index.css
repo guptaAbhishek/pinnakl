@@ -3,47 +3,48 @@
 */
 
 
-
-
-/* Remove the navbar's default margin-bottom and rounded borders */
-.navbar {
-  margin-bottom: 0;
-  border-radius: 0;
+body{
+  background-color: #222233 !important;
+  color: #fff !important;
+  font-family: 'Open Sans', sans-serif !important;
 }
 
 .typehead li{
     padding: 20px 0 20px 0;
+    border-bottom: 1px solid ;
+    font-size: 16px !important;
 }
 
 .typehead{
-  margin-left: 35px;
   list-style: none;
+  margin-left: -4%;
+  padding-top: 5%;
 }
 
-li span{font-size: 20px;}
+li span{font-size: 16px;}
 li p{color: blue; margin-bottom: 0px !important;}
 .secType{
 
 }
 
+.searchBox{
+  height: 50px !important;
+  padding: 20px !important;
+  font-size: 20px !important;
+  color: #222233 !important;
+}
+
 .ticker:before, .ticker:after  {
-  content: '*';
-  color: blue;
+  content: '-';
+  color: #AACCFF;
   padding: 25px;
-  vertical-align: sub;
 }
 
-
-.ticker{
-
-}
-
-.cusip{
-
-}
 
 .desc{
-
+  color: #AACCFF;
+  font-size: 18px;
+  line-height: 3em;
 }
 
 /* Add a gray background color and some padding to the footer */

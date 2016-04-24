@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,28 +6,24 @@
     <title>Pinkkal</title>
     <link rel="stylesheet" href="../app/content/css/index.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
-    <style media="screen">
-    .searchBox{
-      height: 50px;
-      padding: 20px;
-      font-size: 20px;
-    }
-    </style>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   </head>
   <body ng-app="SearchApp" ng-controller="searchController">
-    <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="myNavbar">
 
+  <div class="container">
+    <div class="row" style="padding-top:3%">
+        <div class="col-md-3">
+            <img src="../app/content/images/new-logo.png" alt="Pinnakl Logo" style="width:100%" />
         </div>
       </div>
-    </nav>
-    <div class="jumbotron">
-      <div class="container text-center">
-        <h1>Pinnakl Search Engine</h1>
-        <input type="input" class="form-control searchBox" ng-model="searchQuery.keywords"  ng-keyup="getSugestion($event)" autocomplete="off" name="name" value="">
-      </div>
-      <div class="suggestions">
+      <div class="row" style="padding-top:3%">
+        <div class="col-md-8">
+          <input type="input" class="form-control searchBox" ng-model="searchQuery.keywords" placeholder="Search.."  ng-keyup="getSugestion($event)" autocomplete="off" name="name" value="">
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8">
         <ul class="typehead">
           <li ng-repeat="searchTerm in suggestions" class="" style="cursor:pointer;">
             <p class="desc">{{ searchTerm.Description }}</p>
@@ -37,7 +34,20 @@
         </ul>
       </div>
     </div>
-    <div class="container">
+
+  </div>
+
+       <div class="container">
+         <div class="row">
+           <div class="col-md-8">
+
+           </div>
+
+         </div>
+
+       </div>
+
+     <div class="container">
       <div class="row">
           <tr class="trRow" >
 
