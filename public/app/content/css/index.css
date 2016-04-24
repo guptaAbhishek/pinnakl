@@ -10,10 +10,13 @@ body{
 }
 
 .typehead li{
-    padding: 20px 0 20px 0;
+    padding: 20px 10px 20px 10px;
     border-bottom: 1px solid ;
     font-size: 16px !important;
 }
+
+.typehead li:hover{background-color: #5B5B74; }
+
 
 .typehead{
   list-style: none;
@@ -47,8 +50,9 @@ li p{color: blue; margin-bottom: 0px !important;}
   line-height: 3em;
 }
 
-/* Add a gray background color and some padding to the footer */
 footer {
-background-color: #f2f2f2;
+  background-color: #157e8b;
   padding: 25px;
+  text-align: center;
+  margin-top: 36.5%;
 }

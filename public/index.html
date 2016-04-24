@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -22,42 +21,30 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" ng-cloak>
       <div class="col-md-8">
         <ul class="typehead">
           <li ng-repeat="searchTerm in suggestions" class="" style="cursor:pointer;">
-            <p class="desc">{{ searchTerm.Description }}</p>
-            <span class="secType">{{ searchTerm.SecType }}</span>
-            <span class="ticker">{{ searchTerm.Ticker }}</span>
-            <span class="cusip">{{ searchTerm.Cusip }}</span>
+            <a ui-sref="search" style="text-decoration:none;">
+              <p class="desc">{{ searchTerm.Description }}</p>
+              <span class="secType">{{ searchTerm.SecType }}</span>
+              <span class="ticker">{{ searchTerm.Ticker }}</span>
+              <span class="cusip">{{ searchTerm.Cusip }}</span>
+            </a>
           </li>
         </ul>
       </div>
+      <div class="col-md-4">
+        <div ui-view=""></div>
+      </div>
     </div>
-
   </div>
 
-       <div class="container">
-         <div class="row">
-           <div class="col-md-8">
+  <footer>
+    <p>PINNAKL EDGE LLC</p>
+    <span>400 S 4TH STREET SUITE 401-236, MINNEAPOLIS, MN 55415, UNITED STATES</span>
 
-           </div>
-
-         </div>
-
-       </div>
-
-     <div class="container">
-      <div class="row">
-          <tr class="trRow" >
-
-          </tr>
-        </table>
-      </div>
-      <div class="row">
-
-      </div>
-    </div>
+  </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <script type="text/javascript" src="http://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>
     <script type="text/javascript" src="../app/app.js"></script>

@@ -5,20 +5,11 @@
     .config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
       $urlRouterProvider.otherwise('/');
 
-      $stateProvider
-        // States
-     .state("main", {
+      $stateProvider.state("search", {
           controller:'searchController',
-          url:"/",
-          templateUrl: "index.html"
+          url:"/search",
+          templateUrl: "./views/partials/detailView.html"
       })
-      .state("main.1", {
-          controller:'searchController',
-          parent: 'main',
-          url:"/1",
-          templateUrl: './views/partials/detailView.html'
-      })
-
     }]);
 
     app.run(['$rootScope', '$state', '$stateParams',
