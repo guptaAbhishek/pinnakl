@@ -18,7 +18,7 @@ searchApp.config(function($stateProvider,$urlRouterProvider){
 
 });
 
-searchApp.factory('searchTerms',function($q,$http){
+searchApp.factory('searchTerms',function($http){
   return{
     // getSearchs:function(){
     //   var deferred = $q.defer(),
@@ -41,7 +41,7 @@ searchApp.factory('searchTerms',function($q,$http){
 
 
 searchApp.controller('SearchListController',function($scope,searchTerms){
-  searchTerms.getSearchs(function(searches){
+  searchTerms.list(function(searches){
     $scope.searches = searches;
     console.log(searches);
   });
