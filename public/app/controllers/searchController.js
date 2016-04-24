@@ -22,7 +22,7 @@
           var count = 0;
           var keyword =  $scope.searchQuery.keywords;
           if($scope.searches.length > 0){
-            if(keyword == null){
+            if(keyword == ''){
               $scope.suggestions = null;
             }
             for(var i=0;i<$scope.searches.length;i++){

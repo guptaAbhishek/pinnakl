@@ -17,10 +17,7 @@
                 elm.removeClass("active");
             });
             elm.bind('click', function() {
-                // alert(scope.SecType);
-                // scope.$parent.searchQuery.keywords = scope.suggestion;
-                // scope.$parent.suggestions = [];
-                // scope.$parent.$apply();
+              
             });
         }
     };

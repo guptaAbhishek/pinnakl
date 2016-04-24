@@ -50,6 +50,8 @@ li p{color: blue; margin-bottom: 0px !important;}
   line-height: 3em;
 }
 
+a{color: #FFFFFF!important; text-decoration: none !important}
+
 footer {
   background-color: #157e8b;
   padding: 25px;
