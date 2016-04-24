@@ -11,14 +11,28 @@
   border-radius: 0;
 }
 
+.typehead li{
+    padding: 20px 0 20px 0;
+}
+
 .typehead{
   margin-left: 35px;
   list-style: none;
 }
 
+li span{font-size: 20px;}
+li p{color: blue; margin-bottom: 0px !important;}
 .secType{
 
 }
+
+.ticker:before, .ticker:after  {
+  content: '*';
+  color: blue;
+  padding: 25px;
+  vertical-align: sub;
+}
+
 
 .ticker{
 

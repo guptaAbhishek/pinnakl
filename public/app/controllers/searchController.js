@@ -31,7 +31,7 @@
               if(str.toLowerCase().indexOf(keyword) >= 0){
                   suggestions.push($scope.searches[i]);
                   count++;
-                  if(count == 10){
+                  if(count == 5){
                     break;
                   }
               }
