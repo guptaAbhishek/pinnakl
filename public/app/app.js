@@ -8,9 +8,8 @@
       $stateProvider
       .state("search", {
           controller:'detailViewControler',
-          url:"/:?desc?sec?tic?cus",
+          url:"/:?Description?SecType?Ticker?Cusips",
           templateUrl: "./views/partials/detailView.html",
-           params: { hiddenOne: null, }
       })
     }]);
 

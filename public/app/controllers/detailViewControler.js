@@ -5,10 +5,10 @@
 
   angular.module('SearchApp').controller(controllerId,
       ['$scope', '$state','$stateParams',function($scope,$state,$stateParams){
-        var desc = $stateParams.desc;
-        var sec = $stateParams.sec;
-        var tic = $stateParams.tic;
-        var cus = $stateParams.cus;
+        var SecType = $stateParams.SecType;
+        var Ticker = $stateParams.Ticker;
+        var Cusip = $stateParams.Cusip;
+        var Description = $stateParams.Description;
         $scope.state = $state.current
         $scope.params = $stateParams;
       }]);
