@@ -25,7 +25,7 @@
       <div class="col-md-8">
         <ul class="typehead">
           <li ng-repeat="searchTerm in suggestions" class="" auto-suggest-menu-item style="cursor:pointer;">
-            <a ui-sref="search" style="text-decoration:none;">
+            <a ui-sref="search({desc:searchTerm.Description,sec:searchTerm.SecType,tic:searchTerm.Ticker,cus:searchTerm.Cusip})" style="text-decoration:none;">
               <p class="desc">{{ searchTerm.Description }}</p>
             </a>
           </li>
@@ -47,6 +47,7 @@
     <script type="text/javascript" src="../app/app.js"></script>
     <script type="text/javascript" src="../app/services/searchFactory.js"></script>
     <script type="text/javascript" src="../app/controllers/searchController.js"></script>
+    <script type="text/javascript" src="../app/controllers/detailViewControler.js"></script>
     <script type="text/javascript" src="../app/directives/autoSuggestMenuItem.js"></script>
 
   </body>
